@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusMate | College Companion</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">🎓 CampusMate</a>
+    <span class="tagline">Your college life, organised.</span>
+  </header>
+
+  <main class="container">
+    <section class="welcome">
+      <p class="eyebrow">YOUR STUDENT DASHBOARD</p>
+      <h1>Hello, Student! 👋</h1>
+      <p>One little space for your busy college life.</p>
+    </section>
+
+    <section class="stats">
+      <article class="card stat"><span>Assignments</span><strong id="assignmentCount">0</strong></article>
+      <article class="card stat"><span>Attendance</span><strong id="attendancePercent">100%</strong></article>
+      <article class="card stat"><span>Quick Notes</span><strong id="noteCount">0</strong></article>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>📅 Today's timetable</h2>
+        <ul class="timetable">
+          <li><time>09:00 AM</time><span>Python Programming</span></li>
+          <li><time>10:00 AM</time><span>Machine Learning</span></li>
+          <li><time>11:30 AM</time><span>Database Management</span></li>
+          <li><time>02:00 PM</time><span>Project Work</span></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>📝 My assignments</h2>
+        <form id="assignmentForm" class="add-form">
+          <input id="assignmentInput" placeholder="Assignment name..." required>
+          <button type="submit">Add</button>
+        </form>
+        <ul id="assignmentList" class="item-list"></ul>
+      </article>
+
+      <article class="card">
+        <h2>📊 Attendance tracker</h2>
+        <p>Classes attended: <strong id="attendedCount">10</strong> / <span id="totalCount">12</span></p>
+        <div class="progress"><div id="attendanceBar"></div></div>
+        <p id="attendanceMessage" class="muted"></p>
+        <div class="actions">
+          <button id="attendedBtn" type="button">+ Attended class</button>
+          <button id="missedBtn" class="secondary" type="button">+ Missed class</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>💡 Quick notes</h2>
+        <form id="noteForm" class="add-form">
+          <input id="noteInput" placeholder="Write a quick note..." required>
+          <button type="submit">Save</button>
+        </form>
+        <ul id="noteList" class="item-list"></ul>
+      </article>
+    </section>
+    <p class="footer">Made with 💜 for students • CampusMate</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
